@@ -4,6 +4,7 @@
     <UContainer>
       <slot />
     </UContainer>
+    <TailwindIndicator />
   </div>
 </template>
 
