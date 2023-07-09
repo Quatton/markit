@@ -1,16 +1,16 @@
 <script setup>
   const links = [
     {
-      name: "Home",
-      path: "/",
+      name: "Motivation",
+      path: "#motivation",
     },
     {
-      name: "About",
-      path: "/about",
+      name: "Features",
+      path: "#features",
     },
     {
-      name: "Contact",
-      path: "/contact",
+      name: "Pricing",
+      path: "#pricing",
     },
   ];
 </script>
