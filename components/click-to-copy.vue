@@ -35,10 +35,10 @@
 
 <template>
   <ClientOnly>
-    <UToolTip text="Click to copy">
-      <span class="cursor-pointer underline" @click="handleCopy">{{
-        label
-      }}</span>
-    </UToolTip>
+    <UTooltip text="Click to copy">
+      <UButton :padded="false" variant="link" @click="handleCopy">
+        {{ label }}
+      </UButton>
+    </UTooltip>
   </ClientOnly>
 </template>

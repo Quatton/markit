@@ -47,7 +47,7 @@
           >
             Dan Kulkov
           </a>
-          and I got inspired to build a tool around it so I replied to him.
+          and I got inspired to build a tool around it.
         </p>
 
         <p>
@@ -112,6 +112,19 @@
       >
         <h2>Pricing</h2>
         <p>
+          (Credits to
+          <UButton
+            :padded="false"
+            to="https://orm.drizzle.team/#pricing"
+            variant="link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Drizzle ORM
+          </UButton>
+          for this fun joke. 😆)
+        </p>
+        <p>
           As I mentioned before, Markit is
           <strong>100% free and open-source</strong>. I don't plan to monetize
           it in any way. However, I'm open to affiliate partnerships and
@@ -124,13 +137,15 @@
           please feel free to contact me via
           <LazyClickToCopy label="my email" source="quatton@skiff.com" />,
           Twitter
-          <a
-            href="https://twitter.com/quattonbud"
+          <UButton
+            :padded="false"
+            variant="link"
+            to="https://twitter.com/quattonbud"
             target="_blank"
             rel="noopener noreferrer"
           >
             @quattonbud
-          </a>
+          </UButton>
           , or submit a form below.
         </p>
         <PopformSponsor />
