@@ -98,7 +98,7 @@
           <UButton variant="link" to="https://makerbox.club/" :padded="false">
             MakerBox
           </UButton>
-          , Market will automicatically help you personalize the prompts for
+          , Markit will automicatically help you personalize the prompts for
           your product in a few clicks.
         </UCard>
       </div>
