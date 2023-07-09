@@ -2,4 +2,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxthq/ui", "nuxt-vitest", "@nuxtjs/eslint-module"],
+
+  runtimeConfig: {
+    notionSecret: "",
+    notionDatabaseId: "",
+  },
+
+  eslint: {
+    useEslintrc: true,
+  },
 });
