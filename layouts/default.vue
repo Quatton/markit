@@ -1,0 +1,12 @@
+<template>
+  <div class="relative flex min-h-screen flex-col">
+    <LayoutHeader />
+    <UContainer class="w-full">
+      <slot />
+    </UContainer>
+  </div>
+</template>
+
+<script setup></script>
+
+<style></style>

@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: var(--color-gray-100);
+    --foreground: var(--color-gray-900);
+
+    --hover: var(--color-gray-200);
+
+    --border: var(--color-gray-200);
+  }
+
+  .dark:root {
+    --background: var(--color-gray-900);
+    --foreground: var(--color-gray-100);
+
+    --hover: var(--color-gray-800);
+
+    --border: var(--color-gray-800);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
