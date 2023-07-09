@@ -10,6 +10,9 @@ export default <Partial<Config>>{
         hover: "rgb(var(--hover))",
         border: "rgb(var(--border))",
       },
+      screens: {
+        xs: "475px",
+      },
     },
   },
 };
