@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex min-h-screen flex-col">
     <LayoutHeader />
-    <UContainer class="w-full">
+    <UContainer>
       <slot />
     </UContainer>
   </div>
