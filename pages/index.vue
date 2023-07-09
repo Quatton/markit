@@ -1,8 +1,8 @@
 <template>
-  <main>
-    <section class="h-screen flex items-center justify-center">
+  <main class="flex flex-col">
+    <section class="flex h-screen flex-col items-center justify-center">
       <div
-        class="prose dark:prose-invert text-center [&>*]:mx-auto prose-sm md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl"
+        class="prose prose-sm text-center dark:prose-invert md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl [&>*]:mx-auto"
       >
         <h1>
           Building a software product<br />
@@ -24,36 +24,114 @@
         />
       </div>
     </section>
-    <section id="motivation" class="h-screen flex items-center justify-center">
+    <section
+      id="motivation"
+      class="flex h-screen flex-col items-center justify-center"
+    >
       <div
-        class="prose dark:prose-invert text-center [&>*]:mx-auto prose-sm md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl"
+        class="prose prose-sm text-center dark:prose-invert md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl [&>*]:mx-auto"
       >
         <h2>Motivation</h2>
+        <p>
+          Being a solopreneur is hard. You have to do everything yourself: from
+          building a product to marketing and selling it. There are a lot of
+          things to do and it's easy to get overwhelmed.
+        </p>
+
+        <p>
+          One day, I encountered this tweet from
+          <a
+            href="https://twitter.com/quattonbud/status/1677043871619100677"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Dan Kulkov
+          </a>
+          and I got inspired to build a tool around it so I replied to him.
+        </p>
+
+        <p>
+          Markit is basically a word-play on "market" and "kit". It's short and
+          catchy, and I really love it! I'm building Markit for myself and for
+          other developers, so it might not be directly applicable to other
+          types of product. Markit is designed to be minimal and simple, so it's
+          not a replacement for a full-blown marketing course. (So if you want
+          to sponsor by promoting your marketing course or service here, feel
+          free to!)
+        </p>
+
+        <p>
+          I'm by no means an expert in marketing, but I'm learning and I want to
+          share my knowledge with others.
+        </p>
       </div>
     </section>
-    <section id="features" class="h-screen flex items-center justify-center">
+    <section
+      id="features"
+      class="flex h-screen flex-col items-center justify-center gap-4"
+    >
       <div
-        class="prose dark:prose-invert text-center [&>*]:mx-auto prose-sm md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl"
+        class="prose prose-sm text-center dark:prose-invert md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl [&>*]:mx-auto"
       >
         <h2>Features</h2>
       </div>
-    </section>
-    <section id="pricing" class="h-screen flex items-center justify-center">
       <div
-        class="prose dark:prose-invert text-center [&>*]:mx-auto prose-sm md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl"
+        class="grid grid-rows-3 gap-2 lg:grid-cols-3 lg:grid-rows-1 text-sm lg:text-base"
+      >
+        <UCard>
+          <template #header>📚 Interactive tutorial</template> A step-by-step
+          sets of forms that will guide you through the process of building a
+          marketing strategy for your product. You can evaluate your idea and
+          make decisions based on your answers.
+        </UCard>
+        <UCard>
+          <template #header>🗨️ Auto-generated ChatGPT prompts</template> You are
+          not building alone! Markit will generate ChatGPT prompts for you to
+          help you write your copy or to get feedback on your idea. It's not
+          going to be perfect, but we will keep improving the prompt quality
+          over time.
+        </UCard>
+        <UCard>
+          <template #header>🧩 Integrations</template>Markit will seamlessly
+          integrate with other tools by our sponsors. For example, if you are
+          using ChatGPT Mega-Prompts by
+          <UButton variant="link" to="https://makerbox.club/" :padded="false">
+            MakerBox
+          </UButton>
+          , Market will automicatically help you personalize the prompts for
+          your product in a few clicks.
+        </UCard>
+      </div>
+    </section>
+    <section
+      id="pricing"
+      class="flex h-screen flex-col items-center justify-center"
+    >
+      <div
+        class="prose prose-sm text-center dark:prose-invert md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl [&>*]:mx-auto"
       >
         <h2>Pricing</h2>
         <p>
-          Although I don't plan to monetize this project, Markit is open to
-          affiliate partnerships and sponsors.
+          As I mentioned before, Markit is
+          <strong>100% free and open-source</strong>. I don't plan to monetize
+          it in any way. However, I'm open to affiliate partnerships and
+          sponsors.
         </p>
         <p>
           If your product or service is relevant to the audience of Markit, such
           as a landing-page builder, an email marketing tool, or any other
           product that helps solopreneurs to build and grow their business,
           please feel free to contact me via
-          <LazyClickToCopy label="my email" source="quatton@skiff.com" /> or
-          submit the form below.
+          <LazyClickToCopy label="my email" source="quatton@skiff.com" />,
+          Twitter
+          <a
+            href="https://twitter.com/quattonbud"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @quattonbud
+          </a>
+          , or submit a form below.
         </p>
         <PopformSponsor />
       </div>

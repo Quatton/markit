@@ -8,7 +8,7 @@
   const handleSponsorForm = () => {
     toast.add({
       id: "sponsor-form",
-      title: "TODO",
+      title: "//TODO",
       description:
         "Sorry for the inconvenience! Please email me for now. (Already in your clipboard!)",
     });
