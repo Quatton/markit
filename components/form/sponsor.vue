@@ -66,7 +66,7 @@
 
 <template>
   <form
-    class="p-8 space-y-4"
+    class="p-8 space-y-2.5"
     @submit="
       (e) => {
         e.preventDefault();
@@ -74,7 +74,8 @@
       }
     "
   >
-    <UFormGroup name="name" label="Name of your product">
+    <h2 class="text-xl font-bold">Sponsorship form</h2>
+    <UFormGroup name="name" label="Name of the product/company">
       <UInput v-model="name" />
     </UFormGroup>
     <UFormGroup name="tag" label="Category">
@@ -90,11 +91,9 @@
     >
       <UInput v-model="other" />
     </UFormGroup>
-
     <UFormGroup name="email" label="Email">
       <UInput v-model="email" placeholder="email@example.com" type="email" />
     </UFormGroup>
-
     <UFormGroup
       name="helps"
       label="We can help the users with"

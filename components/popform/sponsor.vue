@@ -3,18 +3,24 @@
 </script>
 
 <template>
-  <UModal v-model="isOpen">
-    <ClientOnly>
+  <UModal v-model="isOpen" :ui="{ width: 'sm:max-w-6xl' }">
+    <div class="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2">
+      <Suspense>
+        <LazyDemoQuick />
+        <template #fallback>
+          <USkeleton />
+        </template>
+      </Suspense>
       <LazyFormSponsor
         :close="
           () => {
-            isOpen.value = false;
+            isOpen = false;
           }
         "
       />
-    </ClientOnly>
+    </div>
   </UModal>
-  <UButton v-bind="$attrs" size="lg" @click="isOpen = true">
-    I'm interested
+  <UButton v-bind="$attrs" size="xl" @click="isOpen = true">
+    What does it look like?
   </UButton>
 </template>

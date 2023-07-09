@@ -16,21 +16,23 @@
           </strong>
         </h3>
         <p>Open-source and 100% free.</p>
-        <UButton
-          to="#motivation"
-          size="xl"
-          label="Learn more"
-          class="no-underline"
-        />
+        <span class="mx-auto space-x-2">
+          <UButton
+            to="#motivation"
+            size="xl"
+            variant="outline"
+            label="Learn more"
+            class="no-underline"
+          />
+          <PopformSponsor />
+        </span>
       </div>
     </section>
     <section
       id="motivation"
       class="flex h-screen flex-col items-center justify-center"
     >
-      <div
-        class="prose prose-sm text-center dark:prose-invert md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl [&>*]:mx-auto"
-      >
+      <div class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto">
         <h2>Motivation</h2>
         <p>
           Being a solopreneur is hard. You have to do everything yourself: from
@@ -70,9 +72,7 @@
       id="features"
       class="flex h-screen flex-col items-center justify-center gap-4"
     >
-      <div
-        class="prose prose-sm text-center dark:prose-invert md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl [&>*]:mx-auto"
-      >
+      <div class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto">
         <h2>Features</h2>
       </div>
       <div
@@ -107,9 +107,7 @@
       id="pricing"
       class="flex h-screen flex-col items-center justify-center"
     >
-      <div
-        class="prose prose-sm text-center dark:prose-invert md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl [&>*]:mx-auto"
-      >
+      <div class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto">
         <h2>Pricing</h2>
         <p>
           (Credits to
