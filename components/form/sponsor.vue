@@ -120,7 +120,7 @@
     </UFormGroup>
     <div class="flex justify-center">
       <UButton
-        size="md"
+        size="lg"
         type="submit"
         :disabled="pending"
         :loading="isSubmitting"
