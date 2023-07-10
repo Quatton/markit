@@ -1,19 +1,8 @@
 <template>
-  <Html>
-    <Head>
-      <Script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-      ></Script>
-    </Head>
-    <Body>
-      <NuxtLayout>
-        <NuxtPage />
+  <NuxtLayout>
+    <NuxtPage />
 
-        <TailwindIndicator />
-        <UNotifications />
-      </NuxtLayout>
-    </Body>
-  </Html>
+    <TailwindIndicator />
+    <UNotifications />
+  </NuxtLayout>
 </template>

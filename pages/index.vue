@@ -11,7 +11,7 @@
 
 <template>
   <main class="flex flex-col">
-    <section class="flex h-screen flex-col items-center justify-center">
+    <section class="flex min-h-screen flex-col items-center justify-center">
       <div
         class="prose prose-sm text-center dark:prose-invert md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl [&>*]:mx-auto"
       >
@@ -42,7 +42,7 @@
     </section>
     <section
       id="motivation"
-      class="flex h-screen items-center justify-center flex-col-reverse md:flex-row"
+      class="flex min-h-screen items-center justify-center flex-col-reverse md:flex-row"
     >
       <div
         class="prose prose-sm dark:prose-invert [&>*]:mx-auto md:prose-base lg:prose-lg lg:max-w-4xl"
@@ -86,42 +86,106 @@
     </section>
     <section
       id="features"
-      class="flex h-screen flex-col items-center justify-center gap-4"
+      class="flex min-h-screen flex-col items-center justify-center gap-4"
     >
-      <div class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto">
-        <h2>Features</h2>
-      </div>
       <div
-        class="grid grid-rows-3 gap-2 lg:grid-cols-3 lg:grid-rows-1 text-sm lg:text-base"
+        class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto max-w-full"
       >
-        <UCard>
-          <template #header>📚 Interactive tutorial</template> A step-by-step
-          sets of forms that will guide you through the process of building a
-          marketing strategy for your product. You can evaluate your idea and
-          make decisions based on your answers.
-        </UCard>
-        <UCard>
-          <template #header>🗨️ Auto-generated ChatGPT prompts</template> You are
-          not building alone! Markit will generate ChatGPT prompts for you to
-          help you write your copy or to get feedback on your idea. It's not
-          going to be perfect, but we will keep improving the prompt quality
-          over time.
-        </UCard>
-        <UCard>
-          <template #header>🧩 Integrations</template>Markit will seamlessly
-          integrate with other tools by our sponsors. For example, if you are
-          using ChatGPT Mega-Prompts by
-          <UButton variant="link" to="https://makerbox.club/" :padded="false">
-            MakerBox
-          </UButton>
-          , Markit will automicatically help you personalize the prompts for
-          your product in a few clicks.
-        </UCard>
+        <h2>Features</h2>
+        <div
+          class="grid grid-rows-3 gap-2 md:grid-cols-2 lg:grid-cols-3 md:grid-rows-1"
+        >
+          <UCard
+            class="lg:min-h-[18rem]"
+            :ui="{
+              body: {
+                padding: 'px-2 py-3 sm:p-4',
+              },
+              header: {
+                padding: 'px-2 py-3 sm:p-4',
+              },
+              footer: {
+                base: 'hidden',
+              },
+            }"
+          >
+            <template #header>
+              <p class="whitespace-nowrap my-0 font-bold text-sm">
+                📚 Interactive tutorial
+              </p>
+            </template>
+            <p>
+              A step-by-step sets of forms that will guide you through the
+              process of building a marketing strategy for your product. You can
+              evaluate your idea and make decisions based on your answers.
+            </p>
+          </UCard>
+          <UCard
+            class="lg:min-h-[18rem]"
+            :ui="{
+              body: {
+                padding: 'px-2 py-3 sm:p-4',
+              },
+              header: {
+                padding: 'px-2 py-3 sm:p-4',
+              },
+              footer: {
+                base: 'hidden',
+              },
+            }"
+          >
+            <template #header>
+              <p class="whitespace-nowrap my-0 font-bold text-sm">
+                🗨️ Auto-generated ChatGPT prompts
+              </p>
+            </template>
+            <p>
+              You are not building alone! Markit will generate ChatGPT prompts
+              for you to help you write your copy or to get feedback on your
+              idea. It's not going to be perfect, but we will keep improving the
+              prompt quality over time.
+            </p>
+          </UCard>
+          <UCard
+            class="lg:min-h-[18rem] md:col-span-2 lg:col-span-1"
+            :ui="{
+              body: {
+                padding: 'px-2 py-3 sm:p-4',
+              },
+              header: {
+                padding: 'px-2 py-3 sm:p-4',
+              },
+              footer: {
+                base: 'hidden',
+              },
+            }"
+          >
+            <template #header>
+              <p class="whitespace-nowrap my-0 font-bold text-sm">
+                🧩 Integrations
+              </p>
+            </template>
+            <p>
+              Markit will seamlessly integrate with other tools by our sponsors.
+              For example, if you are using ChatGPT Mega-Prompts by
+              <a
+                href="https://makerbox.club/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary-500"
+              >
+                MakerBox
+              </a>
+              , Markit will automicatically help you personalize the prompts for
+              your product in a few clicks.
+            </p>
+          </UCard>
+        </div>
       </div>
     </section>
     <section
       id="pricing"
-      class="flex h-screen flex-col items-center justify-center"
+      class="flex min-h-screen flex-col items-center justify-center"
     >
       <div
         class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto md:prose-base lg:prose-lg lg:max-w-4xl"
