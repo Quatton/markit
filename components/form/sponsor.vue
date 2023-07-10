@@ -37,7 +37,7 @@
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(payload),
+      body: payload,
     }).catch((err) => {
       toast.add({
         title: "Error",

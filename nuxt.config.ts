@@ -14,6 +14,13 @@ export default defineNuxtConfig({
     icons: ["fa-brands", "skill-icons"],
   },
 
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/"],
+    },
+  },
+
   runtimeConfig: {
     notionSecret: "",
     notionSponsorDatabaseId: "",

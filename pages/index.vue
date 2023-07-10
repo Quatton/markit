@@ -24,9 +24,10 @@
           but not sure how to sell?
         </h1>
         <h3 class="max-w-xl">
-          Markit is an interactive roadmap for technical solopreneurs to
-          validate ideas and build a marketing strategy
-          <br /><strong class="text-primary-500">
+          <Brand /> is an interactive roadmap for technical solopreneurs to
+          validate ideas and build a marketing strategy<br /><strong
+            class="text-primary-500"
+          >
             from pre-sale to post-launch.
           </strong>
         </h3>
@@ -51,8 +52,8 @@
         <h2>Motivation</h2>
         <p>
           Being a solopreneur is hard. You have to do everything yourself: from
-          building a product to marketing and selling it. There are a lot of
-          things to do and it's easy to get overwhelmed.
+          building a product to marketing and selling it. You will be wearing
+          multiple hats at a time and it's easy to get overwhelmed.
         </p>
 
         <p>

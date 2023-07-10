@@ -10,7 +10,7 @@ Open-source and 100% free.
 
 ## Motivation
 
-Being a solopreneur is hard. You have to do everything yourself: from building a product to marketing and selling it. There are a lot of things to do and it's easy to get overwhelmed.
+Being a solopreneur is hard. You have to do everything yourself: from building a product to marketing and selling it. You will be wearing multiple hats at a time and it's easy to get overwhelmed.
 
 One day, I encountered this tweet from [Dan Kulkov](https://twitter.com/quattonbud/status/1677043871619100677) and I got inspired to build a tool around it so I replied to him.
 

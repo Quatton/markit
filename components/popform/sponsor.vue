@@ -34,7 +34,7 @@
           <UButtonGroup>
             <UButton
               size="lg"
-              color="gray"
+              :color="showSponsorForm ? 'primary' : 'gray'"
               label="Sponsor"
               @click="
                 () => {
@@ -44,7 +44,7 @@
             />
             <UButton
               size="lg"
-              color="gray"
+              :color="showSponsorForm ? 'gray' : 'primary'"
               label="Join"
               @click="
                 () => {

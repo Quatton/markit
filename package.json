@@ -30,6 +30,7 @@
     "@vueuse/core": "^10.2.1",
     "clsx": "^1.2.1",
     "nuxt-og-image": "^2.0.6",
+    "playwright": "^1.35.1",
     "tailwind-merge": "^1.13.2"
   }
 }
