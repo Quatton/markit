@@ -1,5 +1,7 @@
 # Markit
 
+⚠️Warning: This project is not open-source ready yet. Please don't submit any pull requests until I finish the initial setup.⚠️
+
 ## Building a software product but not sure how to sell?
 
 Markit is interactive tutorial for solopreneurs that will help you validate your idea and build a marketing strategy from pre-sale to post-launch. 
