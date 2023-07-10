@@ -2,14 +2,9 @@
   const { socials } = useAppConfig();
 
   useSeoMeta({
-    title: "Markit",
+    title: "Home",
     description:
-      "Markit is interactive tutorial for solopreneurs that will help you validate your idea and build a marketing strategy from pre-sale to post-launch.",
-  });
-
-  defineOgImageScreenshot({
-    colorScheme: "dark",
-    delay: 2000,
+      "Building a software product but not sure how to sell? Join Markit to find out.",
   });
 </script>
 
