@@ -44,7 +44,6 @@
       <div class="grid grid-cols-2 grid-rows-1 gap-4 mt-8">
         <UButton
           size="xl"
-          variant="outline"
           color="gray"
           to="https://webflow.com/"
           target="_blank"
@@ -58,7 +57,6 @@
         </UButton>
         <UButton
           size="xl"
-          variant="outline"
           color="gray"
           to="https://www.lemonsqueezy.com"
           target="_blank"
@@ -82,8 +80,7 @@
           v-for="(_, index) in 4"
           :key="index"
           size="xl"
-          :label="`Product #${index + 1}`"
-          variant="outline"
+          :label="`Your Product #${index + 1}`"
           color="gray"
         >
           <template #trailing>
