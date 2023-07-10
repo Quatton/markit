@@ -1,5 +1,16 @@
 <script setup>
   const { socials } = useAppConfig();
+
+  useSeoMeta({
+    title: "Markit",
+    description:
+      "Markit is interactive tutorial for solopreneurs that will help you validate your idea and build a marketing strategy from pre-sale to post-launch.",
+  });
+
+  defineOgImageScreenshot({
+    colorScheme: "dark",
+    delay: 2000,
+  });
 </script>
 
 <template>
@@ -13,8 +24,8 @@
           but not sure how to sell?
         </h1>
         <h3 class="max-w-xl">
-          Markit is interactive tutorial for solopreneurs that will help you
-          validate your idea and build a marketing strategy
+          Markit is an interactive roadmap for technical solopreneurs to
+          validate ideas and build a marketing strategy
           <br /><strong class="text-primary-500">
             from pre-sale to post-launch.
           </strong>

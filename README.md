@@ -4,7 +4,7 @@
 
 ## Building a software product but not sure how to sell?
 
-Markit is interactive tutorial for solopreneurs that will help you validate your idea and build a marketing strategy from pre-sale to post-launch. 
+Markit is an interactive roadmap for technical solopreneurs to validate ideas and build a marketing strategy from pre-sale to post-launch. 
 
 Open-source and 100% free.
 

@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-vitest",
     "@nuxtjs/eslint-module",
+    "nuxt-og-image",
   ],
 
   ui: {
@@ -22,5 +23,5 @@ export default defineNuxtConfig({
     useEslintrc: true,
   },
 
-  plugins: [{ src: "./plugins/vercel.ts", mode: "client" }],
+  plugins: ["/c:/Users/Atom/Documents/GitHub/markit/plugins/vercel.ts"],
 });
