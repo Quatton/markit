@@ -20,10 +20,10 @@
           but not sure how to sell?
         </h1>
         <h3 class="max-w-xl">
-          <Brand /> is an interactive roadmap for technical solopreneurs to
-          validate ideas and build a marketing strategy<br /><strong
-            class="text-primary-500"
-          >
+          <Brand /> is an interactive roadmap for <br />
+          technical solopreneurs to validate ideas <br />
+          and build a marketing strategy <br />
+          <strong class="text-primary-500">
             from pre-sale to post-launch.
           </strong>
         </h3>
