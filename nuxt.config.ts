@@ -16,7 +16,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     notionSecret: "",
-    notionDatabaseId: "",
+    notionSponsorDatabaseId: "",
     notionJoinDatabaseId: "",
   },
 
@@ -24,5 +24,5 @@ export default defineNuxtConfig({
     useEslintrc: true,
   },
 
-  plugins: ["/c:/Users/Atom/Documents/GitHub/markit/plugins/vercel.ts"],
+  plugins: ["plugins/vercel.ts"],
 });

@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
     event
   )) as SponsorForm;
 
-  const { notionSecret, notionDatabaseId } = useRuntimeConfig();
+  const { notionSecret, notionSponsorDatabaseId } = useRuntimeConfig();
 
   const notion = new Client({ auth: notionSecret });
 
@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
     const response = await notion.pages.create({
       parent: {
         type: "database_id",
-        database_id: notionDatabaseId,
+        database_id: notionSponsorDatabaseId,
       },
       properties: {
         title: {

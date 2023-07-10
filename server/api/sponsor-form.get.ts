@@ -1,12 +1,12 @@
 import { Client } from "@notionhq/client";
 
 export default defineEventHandler(async (_event) => {
-  const { notionSecret, notionDatabaseId } = useRuntimeConfig();
+  const { notionSecret, notionSponsorDatabaseId } = useRuntimeConfig();
 
   const notion = new Client({ auth: notionSecret });
 
   const response = await notion.databases.retrieve({
-    database_id: notionDatabaseId,
+    database_id: notionSponsorDatabaseId,
   });
 
   if (
