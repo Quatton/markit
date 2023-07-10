@@ -12,6 +12,10 @@
       type: String,
       required: true,
     },
+    size: {
+      type: String,
+      default: "sm",
+    },
   });
 
   const toast = useToast();
@@ -36,9 +40,12 @@
 <template>
   <ClientOnly>
     <UTooltip text="Click to copy">
-      <UButton :padded="false" variant="link" @click="handleCopy">
+      <span
+        class="cursor-pointer text-primary-500 underline font-semibold"
+        @click="handleCopy"
+      >
         {{ label }}
-      </UButton>
+      </span>
     </UTooltip>
   </ClientOnly>
 </template>

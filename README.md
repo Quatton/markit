@@ -10,13 +10,15 @@ Open-source and 100% free.
 
 ## Motivation
 
-Being a solopreneur is hard. You have to do everything yourself: from building a product to marketing and selling it. You will be wearing multiple hats at a time and it's easy to get overwhelmed.
+Being a solopreneur is hard. You have to do everything yourself: from building a product to marketing and selling it. You will be wearing multiple hats at the same time and it's easy to get overwhelmed.
 
-One day, I encountered this tweet from [Dan Kulkov](https://twitter.com/quattonbud/status/1677043871619100677) and I got inspired to build a tool around it so I replied to him.
+One day, I encountered this tweet from [Dan Kulkov](https://twitter.com/quattonbud/status/1677043871619100677) and I got inspired to build a tool around it. Markit is designed to be minimal and simple, so it's not a replacement for a full-blown
+marketing course. (So if you want to sponsor by promoting your
+marketing course or service here, feel free to!)
 
 Markit is basically a word-play on "market" and "kit". It's short and catchy, and I really love it! I'm building Markit for myself and for other developers, so it might not be directly applicable to other types of product. Markit is designed to be minimal and simple, so it's not a replacement for a full-blown marketing course. (So if you want to sponsor by promoting your marketing course or service here, feel free to!)
 
-I'm by no means an expert in marketing, but I'm learning and I want to share my knowledge with others.
+😆 I'm by no means an expert in marketing, but I'm learning and I want to share my knowledge with others. Feel free to submit a feature request or any changes if you feel like something is missing or can be improved.
 
 ## Features
 

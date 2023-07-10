@@ -3,6 +3,7 @@
 
   useSeoMeta({
     title: "Home",
+    titleTemplate: "%s | Markit",
     description:
       "Building a software product but not sure how to sell? Join Markit to find out.",
   });
@@ -41,16 +42,16 @@
     </section>
     <section
       id="motivation"
-      class="flex h-screen flex-col items-center justify-center"
+      class="flex h-screen items-center justify-center flex-col-reverse md:flex-row"
     >
       <div
-        class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl"
+        class="prose prose-sm dark:prose-invert [&>*]:mx-auto md:prose-base lg:prose-lg lg:max-w-4xl"
       >
-        <h2>Motivation</h2>
+        <h2>Motivation ❤️‍🔥</h2>
         <p>
           Being a solopreneur is hard. You have to do everything yourself: from
           building a product to marketing and selling it. You will be wearing
-          multiple hats at a time and it's easy to get overwhelmed.
+          multiple hats at the same time and it's easy to get overwhelmed.
         </p>
 
         <p>
@@ -62,22 +63,24 @@
           >
             Dan Kulkov
           </a>
-          and I got inspired to build a tool around it.
+          and I got inspired to build a tool around it. Markit is designed to be
+          minimal and simple, so it's not a replacement for a full-blown
+          marketing course. (So if you want to sponsor by promoting your
+          marketing course or service here, feel free to!)
         </p>
 
         <p>
           Markit is basically a word-play on "market" and "kit". It's short and
           catchy, and I really love it! I'm building Markit for myself and for
           other developers, so it might not be directly applicable to other
-          types of product. Markit is designed to be minimal and simple, so it's
-          not a replacement for a full-blown marketing course. (So if you want
-          to sponsor by promoting your marketing course or service here, feel
-          free to!)
+          types of product.
         </p>
 
         <p>
-          I'm by no means an expert in marketing, but I'm learning and I want to
-          share my knowledge with others.
+          😆 I'm by no means an expert in marketing, but I'm learning and I want
+          to share my knowledge with others. Feel free to submit a feature
+          request or any changes if you feel like something is missing or can be
+          improved.
         </p>
       </div>
     </section>
@@ -121,20 +124,20 @@
       class="flex h-screen flex-col items-center justify-center"
     >
       <div
-        class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl"
+        class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto md:prose-base lg:prose-lg lg:max-w-4xl"
       >
         <h2>Pricing</h2>
         <p>
           (Credits to
-          <UButton
-            :padded="false"
-            to="https://orm.drizzle.team/#pricing"
+          <a
+            href="https://orm.drizzle.team/#pricing"
             variant="link"
             target="_blank"
             rel="noopener noreferrer"
+            class="text-primary-500"
           >
             Drizzle ORM
-          </UButton>
+          </a>
           for this fun joke. 😆)
         </p>
         <p>
@@ -149,15 +152,15 @@
           product that helps solopreneurs to build and grow their business,
           please feel free to contact me via
           <LazyClickToCopy label="my email" :source="socials.email" />, Twitter
-          <UButton
-            :padded="false"
+          <a
             variant="link"
-            :to="socials.twitter"
+            :href="socials.twitter"
             target="_blank"
             rel="noopener noreferrer"
+            class="text-primary-500"
           >
             @quattonbud
-          </UButton>
+          </a>
           , or submit a form below.
         </p>
         <PopformSponsor />
