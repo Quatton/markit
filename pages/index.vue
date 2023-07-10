@@ -11,7 +11,7 @@
 
 <template>
   <main class="flex flex-col">
-    <section class="flex min-h-screen flex-col items-center justify-center">
+    <section id="hero" class="flex min-h-screen flex-col items-center pt-32">
       <div
         class="prose prose-sm text-center dark:prose-invert md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl [&>*]:mx-auto"
       >
