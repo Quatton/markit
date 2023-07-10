@@ -67,7 +67,7 @@
 
 <template>
   <form
-    class="p-8 space-y-2.5"
+    class="p-8 space-y-3"
     @submit="
       (e) => {
         e.preventDefault();
@@ -103,7 +103,7 @@
       label="We can help the users with"
       class="space-y-2"
     >
-      <p class="text-sm text-gray-500">Select all that apply</p>
+      <p class="text-sm text-muted-foreground">Select all that apply</p>
     </UFormGroup>
     <UCheckbox
       v-for="(item, index) in data?.helps.map((option) => option.name) ?? []"

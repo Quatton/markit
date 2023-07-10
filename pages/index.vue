@@ -1,3 +1,7 @@
+<script setup>
+  const { socials } = useAppConfig();
+</script>
+
 <template>
   <main class="flex flex-col">
     <section class="flex h-screen flex-col items-center justify-center">
@@ -133,12 +137,11 @@
           as a landing-page builder, an email marketing tool, or any other
           product that helps solopreneurs to build and grow their business,
           please feel free to contact me via
-          <LazyClickToCopy label="my email" source="quatton@skiff.com" />,
-          Twitter
+          <LazyClickToCopy label="my email" :source="socials.email" />, Twitter
           <UButton
             :padded="false"
             variant="link"
-            to="https://twitter.com/quattonbud"
+            :to="socials.twitter"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -151,7 +154,3 @@
     </section>
   </main>
 </template>
-
-<script setup></script>
-
-<style></style>

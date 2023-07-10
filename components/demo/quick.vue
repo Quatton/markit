@@ -40,8 +40,16 @@
     </div>
     <div class="p-8 prose dark:prose-invert">
       <h2>Let's start with creating a landing page for early bird deals!</h2>
-      <p>Try out these tools!</p>
-      <div class="grid grid-cols-2 grid-rows-1 gap-4 mt-8">
+      <p>Try out these recommended tools!</p>
+      <div class="flex gap-4">
+        <p class="flex-1 text-sm text-muted-foreground">
+          Drag & Drop Website Builder
+        </p>
+        <p class="flex-1 text-sm text-muted-foreground">
+          Payment & Subscription Done Easy
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 auto-rows-min">
         <UButton
           size="xl"
           color="gray"
@@ -61,21 +69,19 @@
           to="https://www.lemonsqueezy.com"
           target="_blank"
           rel="noopener noreferrer"
+          class="no-underline"
         >
-          <nuxt-img
-            format="webp"
-            src="https://assets.website-files.com/6347244ba8d63489ba51c08e/6347244ba8d6344eb751c0d5_Logo.svg"
-            alt="Lemon Squeezy"
-            width="128"
-            class="my-0"
-          />
+          <template #leading>
+            <LogoLemonsqueezy />
+          </template>
+          Lemon Squeezy
           <template #trailing>
             <UIcon name="i-heroicons-arrow-up-right" class="ml-auto" />
           </template>
         </UButton>
       </div>
       <p>Sponsored</p>
-      <div class="grid grid-cols-2 grid-rows-3 gap-4 mt-8">
+      <div class="grid grid-cols-2 grid-rows-2 gap-4 mt-8">
         <UButton
           v-for="(_, index) in 4"
           :key="index"

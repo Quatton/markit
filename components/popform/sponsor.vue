@@ -30,6 +30,6 @@
     </div>
   </UModal>
   <UButton v-bind="$attrs" size="xl" @click="isOpen = true">
-    What does it look like?
+    View Demo
   </UButton>
 </template>
