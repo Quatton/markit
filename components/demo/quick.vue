@@ -3,7 +3,7 @@
   const steps = ref([
     {
       number: 1,
-      label: "Pre-Sale",
+      label: "Pre-Launch",
     },
     {
       number: 2,
@@ -11,7 +11,7 @@
     },
     {
       number: 3,
-      label: "Launch",
+      label: "Launch!",
     },
   ]);
 </script>

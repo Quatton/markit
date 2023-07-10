@@ -3,6 +3,10 @@
 
   const links = [
     {
+      name: "Quick Demo",
+      path: "#demo",
+    },
+    {
       name: "Motivation",
       path: "#motivation",
     },

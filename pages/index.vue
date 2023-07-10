@@ -1,6 +1,8 @@
 <script setup>
   const { socials } = useAppConfig();
 
+  const showSponsorForm = ref(false);
+
   useSeoMeta({
     title: "Home",
     titleTemplate: "%s | Markit",
@@ -24,7 +26,7 @@
           technical solopreneurs to validate ideas <br />
           and build a marketing strategy <br />
           <strong class="text-primary-500">
-            from pre-sale to post-launch.
+            from pre-launch to post-launch.
           </strong>
         </h3>
         <p>Open-source and 100% free.</p>
@@ -36,8 +38,18 @@
             label="Learn more"
             class="no-underline"
           />
-          <PopformSponsor :show-sponsor-form-first="true" />
+          <UButton
+            to="#demo"
+            size="xl"
+            label="View Demo"
+            class="no-underline"
+          />
         </span>
+      </div>
+    </section>
+    <section id="demo" class="flex min-h-screen items-center justify-center">
+      <div class="border rounded-lg shadow-xl">
+        <DemoIntegrated :show-sponsor-form-first="showSponsorForm" />
       </div>
     </section>
     <section
@@ -65,7 +77,7 @@
           </a>
           and I got inspired to build a tool around it. Markit is designed to be
           minimal and simple, so it's not a replacement for a full-blown
-          marketing course. (So if you want to sponsor by promoting your
+          marketing course. (Therefore, if you want to sponsor by promoting your
           marketing course or service here, feel free to!)
         </p>
 
@@ -225,9 +237,14 @@
           >
             @quattonbud
           </a>
-          , or submit a form below.
+          , or submit via the form below (above 😆)
         </p>
-        <PopformSponsor />
+        <UButton
+          to="#demo"
+          size="xl"
+          label="Submit a sponsorship request"
+          @click="showSponsorForm = true"
+        />
       </div>
     </section>
   </main>

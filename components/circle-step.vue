@@ -16,7 +16,7 @@
 </script>
 
 <template>
-  <div class="relative w-16 flex flex-col items-center">
+  <div class="relative w-20 flex flex-col items-center">
     <div
       :class="[
         'w-8 h-8 rounded-full flex items-center justify-center',
