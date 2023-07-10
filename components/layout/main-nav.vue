@@ -1,4 +1,6 @@
 <script setup>
+  const { socials } = useAppConfig();
+
   const links = [
     {
       name: "Motivation",
@@ -27,7 +29,26 @@
       {{ link.name }}
     </UButton>
 
-    <LazyThemeToggle />
+    <UButton
+      :to="socials.github"
+      icon="i-fa-brands-github"
+      target="_blank"
+      rel="noopener noreferrer"
+      variant="ghost"
+      size="sm"
+      square
+    />
+
+    <UButton
+      :to="socials.twitter"
+      icon="i-fa-brands-twitter"
+      target="_blank"
+      variant="ghost"
+      size="sm"
+      square
+    />
+
+    <ThemeToggle />
   </nav>
 </template>
 <style></style>

@@ -2,6 +2,10 @@ export default defineAppConfig({
   ui: {
     primary: "amber",
     gray: "stone",
-    icons: "all",
+  },
+  socials: {
+    twitter: "https://twitter.com/quattonbud",
+    github: "https://github.com/Quatton/markit",
+    email: "quatton@skiff.com",
   },
 });

@@ -34,7 +34,7 @@ Markit will seamlessly integrate with other tools by our sponsors. For example, 
 ## Pricing
 As I mentioned before, Markit is **100% free and open-source**. I don't plan to monetize it in any way. However, I'm open to affiliate partnerships and sponsors.
 
-If your product or service is relevant to the audience of Markit, such as a landing-page builder, an email marketing tool, or any other product that helps solopreneurs to build and grow their business, please feel free to contact me via [my email](mailto:quatton@skiff.com) or [Twitter](https://twitter.com/quatton).
+If your product or service is relevant to the audience of Markit, such as a landing-page builder, an email marketing tool, or any other product that helps solopreneurs to build and grow their business, please feel free to contact me via [my email](mailto:quatton@skiff.com) or [Twitter](https://twitter.com/quattonbud).
 
 ## Contributing
 
