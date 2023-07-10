@@ -72,7 +72,7 @@
 
 <template>
   <form
-    class="space-y-3"
+    class="flex flex-col gap-3"
     @submit="
       (e) => {
         e.preventDefault();
@@ -100,7 +100,7 @@
       </UFormGroup>
     </div>
     <div class="flex gap-2">
-      <UFormGroup class="flex-1" name="email" label="Email or Twitter handle">
+      <UFormGroup class="flex-1" name="email" label="Email / Twitter">
         <UInput
           v-model="email"
           placeholder="email@example.com / @quattonbud"
@@ -133,7 +133,7 @@
         placeholder="Other details you'd like to specify (Spoken languages/Timezones/etc.)"
       />
     </UFormGroup>
-    <div class="flex justify-center">
+    <div class="flex justify-center mt-auto">
       <UButton
         size="lg"
         type="submit"

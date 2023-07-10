@@ -48,7 +48,7 @@
       </div>
     </section>
     <section id="demo" class="flex min-h-screen items-center justify-center">
-      <div class="border rounded-lg shadow-xl">
+      <div class="border rounded-lg shadow-xl w-full sm:max-w-6xl">
         <DemoIntegrated :show-sponsor-form-first="showSponsorForm" />
       </div>
     </section>

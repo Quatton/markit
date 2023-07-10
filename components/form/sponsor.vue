@@ -70,7 +70,7 @@
 
 <template>
   <form
-    class="space-y-3"
+    class="flex flex-col gap-3"
     @submit="
       (e) => {
         e.preventDefault();
@@ -123,7 +123,7 @@
         placeholder="Other details you'd like to specify"
       />
     </UFormGroup>
-    <div class="flex justify-center">
+    <div class="flex justify-center mt-auto">
       <UButton
         size="lg"
         type="submit"
