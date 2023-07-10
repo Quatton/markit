@@ -17,8 +17,8 @@
 </script>
 
 <template>
-  <div class="prose dark:prose-invert">
-    <div class="flex mt-16 h-fit items-center justify-around relative">
+  <div>
+    <div class="flex my-12 h-fit items-center justify-around relative">
       <div :class="cn(['h-1 bg-gray-300 absolute left-0 right-0'])" />
       <div
         :class="
@@ -38,9 +38,9 @@
         :label="step.label"
       />
     </div>
-    <div class="p-8">
-      <h2>Let's start with creating a landing page for early bird deals</h2>
-      <p>Recommended</p>
+    <div class="p-8 prose dark:prose-invert">
+      <h2>Let's start with creating a landing page for early bird deals!</h2>
+      <p>Try out these tools!</p>
       <div class="grid grid-cols-2 grid-rows-1 gap-4 mt-8">
         <UButton
           size="xl"
@@ -50,9 +50,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <template #leading>
-            <LazyLogoWebflow />
-          </template>
+          <LazyLogoWebflow />
 
           <template #trailing>
             <UIcon name="i-heroicons-arrow-up-right" class="ml-auto" />

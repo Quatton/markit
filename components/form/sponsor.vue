@@ -23,10 +23,11 @@
     isSubmitting.value = true;
     const payload = {
       name: name.value,
-      category: selectedTag.value === "Other" ? other.value : selectedTag.value,
+      category: selectedTag.value,
+      other: other.value,
       email: email.value,
       helps: data.value?.helps.filter((_, index) => checked.value[index]) ?? [],
-      details: details.value,
+      details: `${other.value + "\n\n"}${details.value}`,
     };
 
     const res = await $fetch("/api/sponsor-form", {
@@ -74,23 +75,26 @@
       }
     "
   >
-    <h2 class="text-xl font-bold">Sponsorship form</h2>
+    <h2 class="text-xl font-bold">Interested in sponsorship?</h2>
     <UFormGroup name="name" label="Name of the product/company">
       <UInput v-model="name" />
     </UFormGroup>
-    <UFormGroup name="tag" label="Category">
-      <USelect
-        v-model="selectedTag"
-        :options="data?.tags.map((option) => option.name) ?? ['Other']"
-      />
-    </UFormGroup>
-    <UFormGroup
-      v-if="selectedTag === 'Other'"
-      name="other"
-      label="Other (Please specify)"
-    >
-      <UInput v-model="other" />
-    </UFormGroup>
+    <div class="flex gap-2">
+      <UFormGroup name="tag" label="Category">
+        <USelect
+          v-model="selectedTag"
+          :options="data?.tags.map((option) => option.name) ?? ['Other']"
+        />
+      </UFormGroup>
+      <UFormGroup
+        v-if="selectedTag === 'Other'"
+        name="other"
+        label="Other (Please specify)"
+        class="flex-1"
+      >
+        <UInput v-model="other" />
+      </UFormGroup>
+    </div>
     <UFormGroup name="email" label="Email">
       <UInput v-model="email" placeholder="email@example.com" type="email" />
     </UFormGroup>
