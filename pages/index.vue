@@ -39,7 +39,7 @@
             label="Learn more"
             class="no-underline"
           />
-          <PopformSponsor />
+          <PopformSponsor :show-sponsor-form-first="true" />
         </span>
       </div>
     </section>

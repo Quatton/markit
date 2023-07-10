@@ -1,5 +1,14 @@
-<script setup>
+<script setup lang="ts">
   const isOpen = ref(false);
+
+  const props = defineProps({
+    showSponsorFormFirst: {
+      type: Boolean,
+      default: true,
+    },
+  });
+
+  const showSponsorForm = ref(props.showSponsorFormFirst);
 </script>
 
 <template>
@@ -20,13 +29,53 @@
           <USkeleton />
         </template>
       </Suspense>
-      <LazyFormSponsor
-        :close="
-          () => {
-            isOpen = false;
-          }
-        "
-      />
+      <div class="p-8 space-y-2">
+        <div class="flex justify-center">
+          <UButtonGroup>
+            <UButton
+              size="lg"
+              color="gray"
+              label="Sponsor"
+              @click="
+                () => {
+                  showSponsorForm = true;
+                }
+              "
+            />
+            <UButton
+              size="lg"
+              color="gray"
+              label="Join"
+              @click="
+                () => {
+                  showSponsorForm = false;
+                }
+              "
+            />
+          </UButtonGroup>
+        </div>
+        <Suspense>
+          <LazyFormSponsor
+            v-if="showSponsorForm"
+            :close="
+              () => {
+                isOpen = false;
+              }
+            "
+          />
+          <LazyFormJoin
+            v-else
+            :close="
+              () => {
+                isOpen = false;
+              }
+            "
+          />
+          <template #fallback>
+            <USkeleton />
+          </template>
+        </Suspense>
+      </div>
     </div>
   </UModal>
   <UButton v-bind="$attrs" size="xl" @click="isOpen = true">

@@ -1,28 +1,28 @@
 import { Client } from "@notionhq/client";
 import { SelectPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
-export type SponsorForm = {
+export type JoinForm = {
   name: string;
   category: string;
   email: string;
+  github: string;
   helps: SelectPropertyItemObjectResponse[];
   details: string;
 };
 
 export default defineEventHandler(async (event) => {
-  const { name, category, email, helps, details } = (await readBody(
-    event
-  )) as SponsorForm;
-
-  const { notionSecret, notionDatabaseId } = useRuntimeConfig();
-
+  const { notionSecret, notionJoinDatabaseId } = useRuntimeConfig();
   const notion = new Client({ auth: notionSecret });
+
+  const { name, category, email, github, helps, details } = (await readBody(
+    event
+  )) as JoinForm;
 
   try {
     const response = await notion.pages.create({
       parent: {
         type: "database_id",
-        database_id: notionDatabaseId,
+        database_id: notionJoinDatabaseId,
       },
       properties: {
         title: {
@@ -43,8 +43,26 @@ export default defineEventHandler(async (event) => {
           },
         },
         Email: {
-          type: "email",
-          email,
+          type: "rich_text",
+          rich_text: [
+            {
+              type: "text",
+              text: {
+                content: email,
+              },
+            },
+          ],
+        },
+        GitHub: {
+          type: "rich_text",
+          rich_text: [
+            {
+              type: "text",
+              text: {
+                content: github,
+              },
+            },
+          ],
         },
         Help: {
           type: "multi_select",

@@ -17,6 +17,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     notionSecret: "",
     notionDatabaseId: "",
+    notionJoinDatabaseId: "",
   },
 
   eslint: {

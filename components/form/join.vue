@@ -10,11 +10,12 @@
   const selectedTag = ref("");
   const other = ref("");
   const email = ref("");
+  const github = ref("");
   const details = ref("");
 
   const isSubmitting = ref(false);
 
-  const { data, pending } = useFetch("/api/sponsor-form", {
+  const { data, pending } = useFetch("/api/join-form", {
     server: true,
   });
 
@@ -26,13 +27,13 @@
     const payload = {
       name: name.value,
       category: selectedTag.value,
-      other: other.value,
       email: email.value,
+      github: github.value,
       helps: data.value?.helps.filter((_, index) => checked.value[index]) ?? [],
       details: `${other.value + "\n\n"}${details.value}`,
     };
 
-    const res = await $fetch("/api/sponsor-form", {
+    const res = await $fetch("/api/join-form", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -59,6 +60,7 @@
       other.value = "";
       email.value = "";
       details.value = "";
+      github.value = "";
       checked.value = Array(data.value?.helps.length ?? 0).fill(false);
 
       props.close();
@@ -78,11 +80,11 @@
       }
     "
   >
-    <UFormGroup name="name" label="Name of the product/company">
+    <UFormGroup name="name" label="Name (or preferred name)">
       <UInput v-model="name" />
     </UFormGroup>
     <div class="flex gap-2">
-      <UFormGroup name="tag" label="Product Category">
+      <UFormGroup name="tag" label="I am a...">
         <USelect
           v-model="selectedTag"
           :options="data?.tags.map((option) => option.name) ?? ['Other']"
@@ -97,17 +99,25 @@
         <UInput v-model="other" />
       </UFormGroup>
     </div>
-    <UFormGroup name="email" label="Email">
-      <UInput v-model="email" placeholder="email@example.com" type="email" />
-    </UFormGroup>
+    <div class="flex gap-2">
+      <UFormGroup class="flex-1" name="email" label="Email or Twitter handle">
+        <UInput
+          v-model="email"
+          placeholder="email@example.com / @quattonbud"
+          pattern="^.*@.+(\..+)?$"
+        />
+      </UFormGroup>
+      <UFormGroup class="flex-1" name="github" label="GitHub Username">
+        <UInput v-model="github" placeholder="github.com/[this-part-only]" />
+      </UFormGroup>
+    </div>
     <UFormGroup
       name="helps"
-      label="We can help the users with"
+      label="I also want to contribute by..."
       class="space-y-2"
     >
       <p class="text-sm text-muted-foreground">Select all that apply</p>
     </UFormGroup>
-
     <div class="grid grid-cols-2 gap-4">
       <UCheckbox
         v-for="(item, index) in data?.helps.map((option) => option.name) ?? []"
@@ -120,7 +130,7 @@
       <UTextarea
         v-model="details"
         :resize="false"
-        placeholder="Other details you'd like to specify"
+        placeholder="Other details you'd like to specify (Spoken languages/Timezones/etc.)"
       />
     </UFormGroup>
     <div class="flex justify-center">

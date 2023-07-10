@@ -1,17 +1,18 @@
 import { Client } from "@notionhq/client";
 
 export default defineEventHandler(async (_event) => {
-  const { notionSecret, notionDatabaseId } = useRuntimeConfig();
+  const { notionSecret, notionJoinDatabaseId } = useRuntimeConfig();
 
   const notion = new Client({ auth: notionSecret });
 
   const response = await notion.databases.retrieve({
-    database_id: notionDatabaseId,
+    database_id: notionJoinDatabaseId,
   });
 
   if (
     response.properties.Tags.type !== "select" ||
-    response.properties.Help.type !== "multi_select"
+    response.properties.Help.type !== "multi_select" ||
+    response.properties.Languages.type !== "multi_select"
   ) {
     throw createError({
       statusCode: 500,
@@ -28,8 +29,13 @@ export default defineEventHandler(async (_event) => {
     a.name.localeCompare(b.name)
   );
 
+  const languages = response.properties.Languages.multi_select.options.sort(
+    (a, b) => a.name.localeCompare(b.name)
+  );
+
   return {
     tags,
     helps,
+    languages,
   };
 });

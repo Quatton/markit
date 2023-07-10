@@ -18,7 +18,7 @@
 
 <template>
   <div>
-    <div class="flex my-12 h-fit items-center justify-around relative">
+    <div class="flex mt-16 mb-12 h-fit items-center justify-around relative">
       <div :class="cn(['h-1 bg-gray-300 absolute left-0 right-0'])" />
       <div
         :class="
