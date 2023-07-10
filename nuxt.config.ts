@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   modules: [
     "@nuxthq/ui",
     "@nuxt/image",
@@ -16,4 +17,6 @@ export default defineNuxtConfig({
   eslint: {
     useEslintrc: true,
   },
+
+  plugins: [{ src: "./plugins/vercel.ts", mode: "client" }],
 });
