@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     "@nuxtjs/eslint-module",
   ],
 
+  ui: {
+    icons: ["fa-brands", "skill-icons"],
+  },
+
   runtimeConfig: {
     notionSecret: "",
     notionDatabaseId: "",

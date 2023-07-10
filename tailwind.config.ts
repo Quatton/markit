@@ -8,6 +8,8 @@ export default <Partial<Config>>{
         background: "rgb(var(--background))",
         foreground: "rgb(var(--foreground))",
         hover: "rgb(var(--hover))",
+        muted: "rgb(var(--muted))",
+        "muted-foreground": "rgb(var(--muted-foreground))",
         border: "rgb(var(--border))",
       },
       screens: {
