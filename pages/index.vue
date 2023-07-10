@@ -43,7 +43,9 @@
       id="motivation"
       class="flex h-screen flex-col items-center justify-center"
     >
-      <div class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto">
+      <div
+        class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl"
+      >
         <h2>Motivation</h2>
         <p>
           Being a solopreneur is hard. You have to do everything yourself: from
@@ -118,7 +120,9 @@
       id="pricing"
       class="flex h-screen flex-col items-center justify-center"
     >
-      <div class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto">
+      <div
+        class="prose prose-sm text-center dark:prose-invert [&>*]:mx-auto md:prose-base lg:prose-lg xl:prose-xl lg:max-w-4xl"
+      >
         <h2>Pricing</h2>
         <p>
           (Credits to
